@@ -65,11 +65,12 @@ def main():
 
     if user_type_input == 'yes' or user_type_input == 'y':
         print('authorization module>>>>>>>> ')
-    # вход по логину и паролю                                          ВСТАВИТЬ МОДУЛЬ АВТОРИЗАЦИИ!!!!!!!!!!!!!!!!
+    # вход по логину и паролю                                      ВСТАВИТЬ ССЫЛКУ НА МОДУЛЬ АВТОРИЗАЦИИ!!!!!!!!!!!!!!!!
     elif user_type_input == 'no' or user_type_input == 'n':
         user_second_answer = input('Would you like to register? Please type Yes (Y) or No (N)')
         if user_second_answer == 'y' or user_second_answer == 'yes':
-        print('full operational capabilities available!!!')
+            print('full operational capabilities available!!!')
+        #     регистрация                                              ВСТАВИТЬ ССЫЛКУ НА МОДУЛЬ РЕЕГИСТРАЦИИ!!!!!!!!!!!
         elif user_second_answer == 'no' or user_second_answer == 'n':
             print('simple module available only')
         else:

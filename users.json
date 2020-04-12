@@ -4,49 +4,11 @@
     "password": "a",
     "id": 1
   },
-  {
-    "login": "b",
-    "password": "b",
-    "id": 2
-  },
-  {
-    "login": "c",
-    "password": "c",
-    "id": 3
-  },
-  {
-    "login": "t",
-    "password": "t",
-    "id": 4
-  },
-  {
-    "login": "nn",
-    "password": "nn",
-    "id": 5
-  },
-  {
-    "login": "r",
-    "password": "r",
-    "id": 6
-  },
+
   {
     "login": "anton",
     "password": "qwerty",
     "id": 7
   },
-  {
-    "login": "sdf",
-    "password": "adsfd",
-    "id": 8
-  },
-  {
-    "login": "anton1",
-    "password": "asd",
-    "id": 9
-  },
-  {
-    "login": "kk",
-    "password": "ads",
-    "id": 10
-  }
+
 ]

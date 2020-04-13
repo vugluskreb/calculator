@@ -1,5 +1,4 @@
                                        # МОДУЛЬ ОСНОВНЫХ ОПЕРАЦИЙ
-
 def add(a, b):
     return a + b
 
@@ -29,3 +28,6 @@ def cosinus(a)
 
 def tangens(a):
     return tan(a)
+
+
+#                                                   АЛЬТЕРНАТИВА

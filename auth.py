@@ -2,13 +2,25 @@ import os
 import json
 
 
+
+
+
 #                                   МОДУЛЬ ПРОВЕРКИ ЛОГИНА И ПАРОЛЯ ПОЛЬЗОВАТЕЛЯ
-def check_pass(pass1, pass2):
-#     ТУТ НАДО ПРОВЕРИТЬ ЛОГИН и ПОТОМ ПРОВЕРИТЬ ПАРОЛЬ
-#     ЕСЛИ ДА ТО ОБЕЗБЯНУ КИДАЕТ В МОДУЛЬ ОПАРАЦИЙ
-#
-
-
+def authorization():
+    login = input('Enter your login:')
+    password = input('Enter your password:')
+    file = os.path.join('users.json')
+    with open(file, 'r') as users:
+        list_users = json.load(users)
+        for user in list_users:
+            if user['login'] == login:
+                if password['password'] == password:
+                    print('Welcome, ', login, '!')
+                    #            блок математических функций
+                else:
+                    raise ValueError("Incorrect password '{}'".format(password))
+            else:
+                raise ValueError("user doesn't exists with login {}".format(login))
 
 
 def register():
@@ -62,38 +74,42 @@ def write_to_db(**new_user):
         json.dump(user_data, f)
     return new_user
 
+    # Module to define if user is already registered
 
 
-                            # Module to define if user is already registered
-
-
-
+#                                           ТУТ ПОШЛА ОТСЕБЯТИНА
 def main():
-    print('Thank you for choosing our high-quality Product!')
-    user_type_input = input('''Have you already registered as USER?
-    Please type Yes (Y) or No (N) ''').lower().strip()
+    try:
+        print('Thank you for choosing our high-quality Product!')
+        user_type_input = input('''Have you already registered as USER?
+        Please type Yes (Y) or No (N) ''').lower().strip()
 
-    if user_type_input == 'yes' or user_type_input == 'y':
-        print('authorization module started >>>>>>>> ')
-    # вход по логину и паролю                                      ВСТАВИТЬ ССЫЛКУ НА МОДУЛЬ АВТОРИЗАЦИИ!!!!!!!!!!!!!!!!
-    elif user_type_input == 'no' or user_type_input == 'n':
-        user_second_answer = input('Would you like to register? Please type Yes (Y) or No (N)')
-        if user_second_answer == 'y' or user_second_answer == 'yes':
-            print('full operational capabilities available!!! ')
-            register()    # регистрация                                             ССЫЛКА НА МОДУЛЬ РЕЕГИСТРАЦИИ!!!!!!!!!!!
-        elif user_second_answer == 'no' or user_second_answer == 'n':\
-            print('simple module available only (simple operations)')
+        if user_type_input == 'yes' or user_type_input == 'y':
+            print('authorization module started >>>>>>>> ')
+            authorization()
+        # вход по логину и паролю                                      ВСТАВИТЬ ССЫЛКУ НА МОДУЛЬ АВТОРИЗАЦИИ!!!!!!!!!!!!!!!!
+        elif user_type_input == 'no' or user_type_input == 'n':
+            user_second_answer = input('Would you like to register? Please type Yes (Y) or No (N)')
+            if user_second_answer == 'y' or user_second_answer == 'yes':
+                print('full operational capabilities available!!! ')
+                register()  # регистрация                                             ССЫЛКА НА МОДУЛЬ РЕЕГИСТРАЦИИ!!!!!!!!!!!
+            elif user_second_answer == 'no' or user_second_answer == 'n': \
+                    print('simple module available only (simple operations)')
             # simple_operations()                                               ССЫЛКА НА МОДУЛЬ +  - / *    !!!!!!!!!!!
+            else:
+                print('Not correct input. Please try again')
+                main()
         else:
             print('Not correct input. Please try again')
-            main()
-    else:
-        print('Not correct input. Please try again')
-        input('Would you try again? Type Yes or No'.lower().strip() )
-        if user_type_input == 'yes' or user_type_input == 'y':
-            main()
-        else:
-            print('Have a nice day! Bye!')
+            input('Would you try again? Type Yes or No'.lower().strip())
+            if user_type_input == 'yes' or user_type_input == 'y':
+                main()
+            else:
+                print('Have a nice day! Bye!')
+    except Exception as e:
+        print(Exception)
+
+
 
 
 # user = register()

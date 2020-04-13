@@ -1,3 +1,5 @@
+                                       # МОДУЛЬ ОСНОВНЫХ ОПЕРАЦИЙ
+
 def add(a, b):
     return a + b
 
@@ -6,13 +8,24 @@ def sub(a, b):
     return a - b
 
 
-def
+def mul(a, b):
+    return a * b
+
+def div(a, b)
+    try:
+        return a / b
+    except ZeroDivisionError:
+        print('Division by zero error!')
 
 
 
-if __name__ == '__main__':
-    print('File', __file__)
-    print(add(2, 2))
+                                         # ТРИГОНОМЕТРИЧЕСКИЕ ФУНКЦИИ
 
-    print('HELLLOOOO!!!!!')
-    assert add(2, 3) == 5
+def sinus(a):
+    return sin(a)
+
+def cosinus(a)
+     return cos(a)
+
+def tangens(a):
+    return tan(a)

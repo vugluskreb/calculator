@@ -4,8 +4,12 @@ import json
 
 #                                   МОДУЛЬ ПРОВЕРКИ ЛОГИНА И ПАРОЛЯ ПОЛЬЗОВАТЕЛЯ
 def check_pass(pass1, pass2):
-    return True
-#  if
+#     ТУТ НАДО ПРОВЕРИТЬ ЛОГИН и ПОТОМ ПРОВЕРИТЬ ПАРОЛЬ
+#     ЕСЛИ ДА ТО ОБЕЗБЯНУ КИДАЕТ В МОДУЛЬ ОПАРАЦИЙ
+#
+
+
+
 
 def register():
     repeat_register = True
